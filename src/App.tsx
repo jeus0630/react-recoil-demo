@@ -1,43 +1,29 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useQuery } from 'react-query';
+import { useRecoilState } from 'recoil';
+import todosState from './state/todo';
+
+const getTodos = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const data = await res.json();
+  return data;
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const { isLoading, isError, data } = useQuery<any, any>('todos', getTodos);
+  const [todos, setTodos] = useRecoilState(todosState);
+
+  if (isLoading) {
+    <div>...Loading</div>
+  }
+
+  if (data) {
+    setTodos(data);
+  }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      {JSON.stringify(todos)}
     </div>
   )
 }
