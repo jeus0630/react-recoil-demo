@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:18.1.0"],\
             ["react-query", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:3.39.0"],\
+            ["recoil", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:0.7.3-alpha.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"],\
             ["vite", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:2.9.8"]\
           ],\
@@ -1336,6 +1337,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["hamt_plus", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/hamt_plus-npm-1.0.2-67a52ee1df-af26ea32db.zip/node_modules/hamt_plus/",\
+          "packageDependencies": [\
+            ["hamt_plus", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["has", [\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/has-npm-1.0.3-b7f00631c1-b9ad53d53b.zip/node_modules/has/",\
@@ -2001,6 +2011,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:18.1.0"],\
             ["react-query", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:3.39.0"],\
+            ["recoil", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:0.7.3-alpha.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"],\
             ["vite", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:2.9.8"]\
           ],\
@@ -2024,6 +2035,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["inherits", "npm:2.0.4"],\
             ["string_decoder", "npm:1.3.0"],\
             ["util-deprecate", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["recoil", [\
+        ["npm:0.7.3-alpha.1", {\
+          "packageLocation": "./.yarn/cache/recoil-npm-0.7.3-alpha.1-6a870c8212-a299d1c9bc.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "npm:0.7.3-alpha.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:0.7.3-alpha.1", {\
+          "packageLocation": "./.yarn/__virtual__/recoil-virtual-bf9262cbbc/0/cache/recoil-npm-0.7.3-alpha.1-6a870c8212-a299d1c9bc.zip/node_modules/recoil/",\
+          "packageDependencies": [\
+            ["recoil", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:0.7.3-alpha.1"],\
+            ["@types/react", "npm:18.0.9"],\
+            ["@types/react-dom", "npm:18.0.3"],\
+            ["@types/react-native", null],\
+            ["hamt_plus", "npm:1.0.2"],\
+            ["react", "npm:18.1.0"],\
+            ["react-dom", "virtual:b5354636b1095bae56756e87e88e24b06d2e845dc51cfc2e71224445a42a182e5bbe645c217c85705bdc07217135d6b7b1bc4d047508dac78ed0acd900d390c2#npm:18.1.0"],\
+            ["react-native", null]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
+            "@types/react-native",\
+            "@types/react",\
+            "react-dom",\
+            "react-native",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
